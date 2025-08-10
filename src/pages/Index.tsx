@@ -24,12 +24,6 @@ const Index = () => {
             <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">Counselor, Author & Organizer</span>
           </h1>
           <div className="mx-auto mt-6 accent-bar animate-[fade-in-up_800ms_ease-out_forwards] opacity-0" />
-          <p className="mt-8 text-base sm:text-lg text-muted-foreground animate-[fade-in-up_900ms_ease-out_forwards] opacity-0">
-            A minimal, thoughtful home is coming soon.
-          </p>
-          <p className="mt-2 text-sm text-muted-foreground animate-[fade-in-up_1000ms_ease-out_forwards] opacity-0">
-            For updates, visit <a href="https://michelletraudt.com" className="underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground" aria-label="Visit michelletraudt.com">michelletraudt.com</a>
-          </p>
         </article>
       </main>
 
