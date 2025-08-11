@@ -11,11 +11,6 @@ const Index = () => {
 
   return (
     <>
-      <header className="container py-8" role="banner">
-        <nav className="flex items-center justify-between" aria-label="Primary">
-          <span className="text-sm text-muted-foreground">michelletraudt.com</span>
-        </nav>
-      </header>
 
       <main className="container min-h-[70vh] flex items-center justify-center" role="main">
         <article className="text-center" aria-label="Coming Soon">
@@ -27,9 +22,6 @@ const Index = () => {
         </article>
       </main>
 
-      <footer className="container pb-10 text-center text-xs text-muted-foreground" role="contentinfo">
-        <p>&copy; {new Date().getFullYear()} Michelle Traudt</p>
-      </footer>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
