@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <>
 
-      <main className="container min-h-[70vh] flex items-center justify-center" role="main">
+      <main className="container min-h-screen flex items-center justify-center" role="main">
         <article className="text-center" aria-label="Coming Soon">
           <h1 className="font-serif tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
             <span className="block">Michelle Traudt</span>
