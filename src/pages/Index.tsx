@@ -16,10 +16,10 @@ const Index = () => {
         <article className="text-center" aria-label="Coming Soon">
           <h1 className="font-serif tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
             <span className="block">Michelle Traudt</span>
-            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">Counselor, Author & Speaker</span>
+            <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">Counselor & Speaker</span>
           </h1>
             <div className="mx-auto mt-6 accent-bar animate-[fade-in-up_800ms_ease-out_forwards] opacity-0" />
-            <p className="mt-8 text-base sm:text-lg text-muted-foreground animate-[fade-in-up_900ms_ease-out_forwards] opacity-0">Coming Soon</p>
+            <a href="mailto:michelletraudt@gmail.com" className="mt-8 text-base sm:text-lg text-muted-foreground animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 hover:text-foreground transition-colors inline-block">michelletraudt @ gmail.com</a>
         </article>
       </main>
 
