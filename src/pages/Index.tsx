@@ -1,4 +1,5 @@
 import React from "react";
+import heartImage from "@/assets/heart.png";
 
 const Index = () => {
   const jsonLd = {
@@ -14,6 +15,7 @@ const Index = () => {
 
       <main className="container min-h-screen flex items-center justify-center pt-0 sm:pt-20" role="main">
         <article className="text-center" aria-label="Coming Soon">
+          <img src={heartImage} alt="Heart" className="w-16 h-16 mx-auto mb-4 animate-[fade-in-up_600ms_ease-out_forwards] opacity-0" />
           <h1 className="font-serif tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
             <span className="block">Michelle Traudt</span>
             <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground mt-2">Counselor & Speaker</span>
