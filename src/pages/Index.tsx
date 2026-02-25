@@ -100,31 +100,7 @@ const Index = () => {
                 </div>
               </div>
 
-              {/* Bottom bar: CTA band + contact */}
-              <div className="mt-6 flex items-center gap-6 xl:gap-8 bg-primary/10 rounded-xl px-6 py-4 animate-[fade-in_1000ms_ease-out_forwards] opacity-0">
-                <p className="font-serif text-sm xl:text-base text-foreground/80 leading-snug shrink-0">
-                  Taking the first step can feel overwhelming.<br className="hidden xl:block" />
-                  <span className="text-foreground font-medium">You don't have to do it alone.</span>
-                </p>
-                <div className="h-8 w-px bg-border shrink-0" />
-                <div className="flex items-center gap-6 text-xs text-muted-foreground">
-                  <a href="mailto:michelletraudt@gmail.com" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
-                    <Mail className="w-3.5 h-3.5" /> michelletraudt@gmail.com
-                  </a>
-                  <a href="tel:+1234567890" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
-                    <Phone className="w-3.5 h-3.5" /> (123) 456-7890
-                  </a>
-                  <span className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5" /> Dallas–Fort Worth, TX
-                  </span>
-                </div>
-                <a
-                  href="mailto:michelletraudt@gmail.com"
-                  className="ml-auto shrink-0 bg-primary text-primary-foreground px-5 py-2 rounded-lg text-xs font-semibold hover:bg-primary/80 transition-colors"
-                >
-                  Book Now
-                </a>
-              </div>
+
             </div>
           </div>
 
