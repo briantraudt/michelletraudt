@@ -129,11 +129,10 @@ const Index = () => {
             </a>
 
             {/* Services */}
-            <div className="mt-5 w-full max-w-xs space-y-2">
+            <div className="mt-5 w-full max-w-xs flex gap-2">
               {services.map((s) => (
-                <div key={s.title} className="bg-card rounded-lg px-4 py-3 text-left">
-                  <h3 className="font-serif text-xs text-foreground">{s.title}</h3>
-                  <p className="text-[10px] text-muted-foreground mt-0.5">{s.desc}</p>
+                <div key={s.title} className="flex-1 bg-card rounded-lg px-3 py-3 text-center">
+                  <h3 className="font-serif text-[10px] text-foreground leading-snug">{s.title}</h3>
                 </div>
               ))}
             </div>
