@@ -93,10 +93,10 @@ const Index = () => {
                   />
                 </div>
                 <div className="mt-3 md:mt-4 text-[10px] md:text-[11px] xl:text-xs text-muted-foreground leading-relaxed text-center max-w-[180px] md:max-w-[220px] lg:max-w-[280px] xl:max-w-[320px]">
-                  <p className="font-medium text-foreground/70 mb-0.5">Education</p>
+                  <p className="font-semibold text-foreground/70 mb-0.5">Education</p>
                   <p>MA in Counseling, Dallas Theological Seminary</p>
                   <p>BS in Merchandising, Texas Tech University</p>
-                  <p className="font-medium text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Professional Memberships</p>
+                  <p className="font-semibold text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Professional Memberships</p>
                   <p>Christian Counselors of Texas</p>
                 </div>
               </div>
