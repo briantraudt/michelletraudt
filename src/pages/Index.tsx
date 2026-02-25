@@ -64,6 +64,9 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
+                <p className="mt-3 text-[11px] xl:text-xs text-muted-foreground/50 tracking-wide">
+                  New Life Counseling Center · Southwest Location · 3355 Bee Caves Road, #101 · Austin, Texas 78746
+                </p>
               </div>
 
               {/* Right — Portrait */}
