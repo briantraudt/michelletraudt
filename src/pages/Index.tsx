@@ -1,5 +1,6 @@
 import React from "react";
 import heartImage from "@/assets/heart.png";
+import michellePortrait from "@/assets/michelle-portrait.jpg";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Index = () => {
@@ -53,10 +54,12 @@ const Index = () => {
 
               {/* Right — Portrait placeholder */}
               <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 flex justify-center lg:justify-end">
-                <div className="w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-2xl bg-card flex items-center justify-center shadow-sm">
-                  <span className="text-sm text-muted-foreground tracking-widest uppercase">
-                    Portrait
-                  </span>
+                <div className="w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+                  <img
+                    src={michellePortrait}
+                    alt="Michelle Traudt, Licensed Counselor & Speaker"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
               </div>
             </div>
