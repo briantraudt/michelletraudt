@@ -103,13 +103,13 @@ const Index = () => {
         {/* ===== MOBILE only ===== */}
         <div className="md:hidden min-h-screen flex flex-col px-6 py-10">
           <div className="flex-1 flex flex-col items-center justify-center text-center animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
-            {/* Heart */}
-            <img src={heartImage} alt="" className="w-7 h-7 mb-3 opacity-80" aria-hidden="true" />
-
             {/* Portrait */}
-            <div className="w-28 aspect-[3/4] rounded-xl overflow-hidden shadow-md mb-4">
+            <div className="w-40 aspect-[3/4] rounded-xl overflow-hidden shadow-md mb-4">
               <img src={michellePortrait} alt="Michelle Traudt" className="w-full h-full object-cover object-top" />
             </div>
+
+            {/* Heart */}
+            <img src={heartImage} alt="" className="w-7 h-7 mb-2 opacity-80" aria-hidden="true" />
 
             <h1 className="font-serif text-3xl tracking-tight leading-[1.1] text-foreground">
               Michelle Traudt
@@ -139,9 +139,10 @@ const Index = () => {
           </div>
 
           {/* Address at bottom */}
-          <p className="text-center text-[10px] text-muted-foreground mt-4">
-            New Life Counseling Center · 3355 Bee Caves Road, #101 · Austin, TX 78746
-          </p>
+          <div className="text-center mt-4">
+            <p className="text-sm font-semibold text-foreground/70">New Life Counseling Center</p>
+            <p className="text-[10px] text-muted-foreground mt-0.5">3355 Bee Caves Road, #101 · Austin, TX 78746</p>
+          </div>
         </div>
 
       </main>
