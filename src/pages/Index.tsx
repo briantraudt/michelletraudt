@@ -67,13 +67,20 @@ const Index = () => {
               </div>
 
               {/* Right — Portrait */}
-              <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 shrink-0">
+              <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 shrink-0 flex flex-col items-center">
                 <div className="w-[280px] xl:w-[320px] 2xl:w-[360px] aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
                   <img
                     src={michellePortrait}
                     alt="Michelle Traudt, Licensed Counselor & Speaker"
                     className="w-full h-full object-cover object-top"
                   />
+                </div>
+                <div className="mt-4 text-[11px] xl:text-xs text-muted-foreground/60 leading-relaxed text-center max-w-[280px] xl:max-w-[320px]">
+                  <p className="font-medium text-muted-foreground/70 mb-0.5">Education</p>
+                  <p>MA in Counseling, Dallas Theological Seminary</p>
+                  <p>BS in Merchandising, Texas Tech University</p>
+                  <p className="font-medium text-muted-foreground/70 mt-2.5 mb-0.5">Professional Memberships</p>
+                  <p>Christian Counselors of Texas</p>
                 </div>
               </div>
             </div>
