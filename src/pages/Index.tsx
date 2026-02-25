@@ -30,7 +30,9 @@ const Index = () => {
 
               {/* Left — Text stack */}
               <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0 min-w-0">
-                <img src={heartImage} alt="" className="w-8 h-8 mb-3 opacity-80" aria-hidden="true" />
+                <div className="flex justify-center">
+                  <img src={heartImage} alt="" className="w-8 h-8 mb-3 opacity-80" aria-hidden="true" />
+                </div>
                 <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-[1.05] text-foreground">
                   Michelle Traudt
                 </h1>
