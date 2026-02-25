@@ -96,59 +96,48 @@ const Index = () => {
         </div>
 
         {/* ===== MOBILE only ===== */}
-        <div className="md:hidden">
-          <section className="min-h-screen flex items-center py-16 px-6 sm:px-10">
-            <div className="max-w-lg mx-auto w-full animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
-              <h1 className="font-serif text-4xl sm:text-5xl tracking-tight leading-[1.1] text-foreground">
-                Michelle<br />Traudt
-              </h1>
-              <p className="text-sm text-muted-foreground/70 mt-2">Licensed Counselor & Speaker</p>
-              <p className="mt-5 text-base text-muted-foreground leading-relaxed">
-                You don't have to carry it alone. Counseling offers a steady, compassionate
-                space to work through life's challenges — whether you're navigating anxiety,
-                relationship struggles, or a deeply personal journey toward healing.
-              </p>
-              <a
-                href="mailto:hope@newlifecounselingcenter.com?subject=Schedule%20an%20appt%20with%20Michelle%20Traudt"
-                className="mt-6 inline-block bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-semibold hover:bg-primary/80 transition-colors shadow-sm"
-              >
-                Schedule a Consultation
-              </a>
-            </div>
-          </section>
+        <div className="md:hidden min-h-screen flex flex-col px-6 py-10">
+          <div className="flex-1 flex flex-col items-center justify-center text-center animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
+            {/* Heart */}
+            <img src={heartImage} alt="" className="w-7 h-7 mb-3 opacity-80" aria-hidden="true" />
 
-          <section className="px-6 sm:px-10 pb-12">
-            <div className="max-w-xs mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
+            {/* Portrait */}
+            <div className="w-28 aspect-[3/4] rounded-xl overflow-hidden shadow-md mb-4">
               <img src={michellePortrait} alt="Michelle Traudt" className="w-full h-full object-cover object-top" />
             </div>
-          </section>
 
-          <section className="py-12 px-6 sm:px-10">
-            <div className="max-w-lg mx-auto space-y-3">
+            <h1 className="font-serif text-3xl tracking-tight leading-[1.1] text-foreground">
+              Michelle Traudt
+            </h1>
+            <p className="text-xs text-muted-foreground/70 mt-1">Licensed Counselor & Speaker</p>
+
+            <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
+              You don't have to carry it alone. Counseling offers a steady, compassionate
+              space to work through life's challenges.
+            </p>
+
+            <a
+              href="mailto:hope@newlifecounselingcenter.com?subject=Schedule%20an%20appt%20with%20Michelle%20Traudt"
+              className="mt-4 inline-block bg-primary text-primary-foreground px-6 py-2.5 rounded-lg text-xs font-semibold hover:bg-primary/80 transition-colors shadow-sm"
+            >
+              Schedule a Consultation
+            </a>
+
+            {/* Services */}
+            <div className="mt-5 w-full max-w-xs space-y-2">
               {services.map((s) => (
-                <div key={s.title} className="bg-card rounded-xl p-5">
-                  <h3 className="font-serif text-base text-foreground">{s.title}</h3>
-                  <p className="text-sm text-muted-foreground/70 mt-1">{s.desc}</p>
+                <div key={s.title} className="bg-card rounded-lg px-4 py-3 text-left">
+                  <h3 className="font-serif text-xs text-foreground">{s.title}</h3>
+                  <p className="text-[10px] text-muted-foreground mt-0.5">{s.desc}</p>
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
-          <section className="py-12 px-6 sm:px-10 bg-card/50">
-            <div className="max-w-lg mx-auto space-y-3 text-sm text-muted-foreground">
-              <a href="mailto:michelletraudt@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
-                <Mail className="w-4 h-4" /> michelletraudt@gmail.com
-              </a>
-              <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-foreground transition-colors">
-                <Phone className="w-4 h-4" /> (123) 456-7890
-              </a>
-              <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Dallas–Fort Worth, TX</span>
-            </div>
-          </section>
-
-          <footer className="py-6 px-6 text-center">
-            <p className="text-[10px] text-muted-foreground/40">© {new Date().getFullYear()} Michelle Traudt</p>
-          </footer>
+          {/* Address at bottom */}
+          <p className="text-center text-[10px] text-muted-foreground mt-4">
+            New Life Counseling Center · 3355 Bee Caves Road, #101 · Austin, TX 78746
+          </p>
         </div>
 
       </main>
