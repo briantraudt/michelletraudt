@@ -132,23 +132,23 @@ const Index = () => {
             >
               Schedule a Consultation
             </a>
+          </div>
+
+          {/* Address + Services at bottom */}
+          <div className="text-center mt-4">
+            <a href="https://www.newlifecounselingcenter.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-foreground/70 hover:text-foreground transition-colors">
+              New Life Counseling Center
+            </a>
+            <p className="text-[10px] text-muted-foreground mt-0.5">3355 Bee Caves Road, #101 · Austin, TX 78746</p>
 
             {/* Services */}
-            <div className="mt-5 w-full max-w-sm flex gap-3">
+            <div className="mt-5 w-full max-w-sm mx-auto flex gap-3">
               {services.map((s) => (
                 <div key={s.title} className="flex-1 bg-card rounded-xl px-4 py-4 text-center shadow-sm">
                   <h3 className="font-serif text-xs text-foreground leading-snug">{s.title}</h3>
                 </div>
               ))}
             </div>
-          </div>
-
-          {/* Address at bottom */}
-          <div className="text-center mt-4">
-            <a href="https://www.newlifecounselingcenter.com/" target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-foreground/70 hover:text-foreground transition-colors">
-              New Life Counseling Center
-            </a>
-            <p className="text-[10px] text-muted-foreground mt-0.5">3355 Bee Caves Road, #101 · Austin, TX 78746</p>
           </div>
         </div>
 
