@@ -42,7 +42,7 @@ const Index = () => {
                 </p>
 
                 <a
-                  href="mailto:michelletraudt@gmail.com"
+                  href="mailto:hope@newlifecounselingcenter.com?subject=Schedule%20an%20appt%20with%20Michelle%20Traudt"
                   className="mt-4 md:mt-5 lg:mt-6 inline-block bg-primary text-primary-foreground px-6 md:px-8 py-2.5 md:py-3 rounded-lg text-xs md:text-sm font-semibold hover:bg-primary/80 transition-colors shadow-sm"
                 >
                   Schedule a Consultation
@@ -104,7 +104,7 @@ const Index = () => {
                 relationship struggles, or a deeply personal journey toward healing.
               </p>
               <a
-                href="mailto:michelletraudt@gmail.com"
+                href="mailto:hope@newlifecounselingcenter.com?subject=Schedule%20an%20appt%20with%20Michelle%20Traudt"
                 className="mt-6 inline-block bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-semibold hover:bg-primary/80 transition-colors shadow-sm"
               >
                 Schedule a Consultation
