@@ -58,13 +58,13 @@ const Index = () => {
                       <h3 className="font-serif text-sm xl:text-base text-foreground leading-snug">
                         {s.title}
                       </h3>
-                      <p className="text-[11px] xl:text-xs text-muted-foreground/70 mt-1 leading-relaxed">
+                      <p className="text-[11px] xl:text-xs text-muted-foreground mt-1 leading-relaxed">
                         {s.desc}
                       </p>
                     </div>
                   ))}
                 </div>
-                <p className="mt-3 text-[11px] xl:text-xs text-muted-foreground/50 tracking-wide">
+                <p className="mt-3 text-[11px] xl:text-xs text-muted-foreground tracking-wide">
                   New Life Counseling Center · Southwest Location · 3355 Bee Caves Road, #101 · Austin, Texas 78746
                 </p>
               </div>
@@ -78,11 +78,11 @@ const Index = () => {
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
-                <div className="mt-4 text-[11px] xl:text-xs text-muted-foreground/60 leading-relaxed text-center max-w-[280px] xl:max-w-[320px]">
-                  <p className="font-medium text-muted-foreground/70 mb-0.5">Education</p>
+                <div className="mt-4 text-[11px] xl:text-xs text-muted-foreground leading-relaxed text-center max-w-[280px] xl:max-w-[320px]">
+                  <p className="font-medium text-foreground/70 mb-0.5">Education</p>
                   <p>MA in Counseling, Dallas Theological Seminary</p>
                   <p>BS in Merchandising, Texas Tech University</p>
-                  <p className="font-medium text-muted-foreground/70 mt-2.5 mb-0.5">Professional Memberships</p>
+                  <p className="font-medium text-foreground/70 mt-2.5 mb-0.5">Professional Memberships</p>
                   <p>Christian Counselors of Texas</p>
                 </div>
               </div>
