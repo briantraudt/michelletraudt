@@ -16,299 +16,232 @@ const Index = () => {
     <>
       <main role="main" className="overflow-x-hidden">
 
-        {/* ─── SECTION 1 — HERO ─── */}
-        <section className="min-h-screen lg:min-h-0 lg:h-screen lg:max-h-[85vh] flex items-center py-16 lg:py-0">
-          <div className="w-full max-w-[1180px] mx-auto px-6 sm:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
-              {/* Left — Copy */}
-              <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
-                <img
-                  src={heartImage}
-                  alt="Michelle Traudt Counseling"
-                  className="w-6 h-6 mb-4 opacity-60"
-                />
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl tracking-tight leading-[1.1] text-foreground">
-                  Michelle<br />Traudt
-                </h1>
-                <p className="font-sans text-sm sm:text-base text-muted-foreground/80 mt-2 tracking-normal">
-                  Licensed Counselor & Speaker
-                </p>
-                <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg font-normal" style={{ fontWeight: 450 }}>
-                  Therapy is a gift, a safe space as we navigate life's challenges. Healing takes time and patience, but the freedom, growth, and transformation that come from it can truly change your life.
-                </p>
-                <div className="mt-5 flex flex-wrap items-center gap-4">
-                  <a
-                    href="#contact"
-                    className="inline-block bg-primary/90 text-primary-foreground px-8 py-3.5 rounded-lg text-sm font-semibold hover:bg-primary transition-colors shadow-sm"
-                  >
-                    Schedule a Consultation
-                  </a>
-                  <a
-                    href="#about"
-                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
-                  >
-                    Learn More
-                  </a>
-                </div>
-                <p className="mt-4 text-xs text-muted-foreground/60 tracking-wide">
-                  Serving Dallas–Fort Worth · In-Person & Virtual Sessions Available
-                </p>
-                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-muted-foreground/50 tracking-wide">
-                  <span>Licensed Professional Counselor</span>
-                  <span className="hidden sm:inline">·</span>
-                  <span>MA in Counseling</span>
-                  <span className="hidden sm:inline">·</span>
-                  <span>Confidential & Client-Centered</span>
-                </div>
-              </div>
+        {/* ===== DESKTOP — single viewport, zero scroll ===== */}
+        <div className="hidden lg:flex h-screen w-screen overflow-hidden flex-col">
+          <div className="flex-1 flex items-center">
+            <div className="w-full max-w-[1280px] mx-auto px-10 xl:px-14">
+              {/* Top row: Hero + Photo */}
+              <div className="grid grid-cols-[1fr_auto] gap-10 xl:gap-14 items-start">
 
-              {/* Right — Portrait */}
-              <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 flex justify-center lg:justify-end">
-                <div className="w-full max-w-xs sm:max-w-sm lg:max-w-[340px] xl:max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
-                  <img
-                    src={michellePortrait}
-                    alt="Michelle Traudt, Licensed Counselor & Speaker"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── SECTION 2 — ABOUT ─── */}
-        <section id="about" className="py-24 sm:py-32 bg-card/50">
-          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-8">
-              About Michelle
-            </h2>
-            <div className="max-w-2xl space-y-5 text-muted-foreground leading-[1.75] text-base sm:text-lg">
-              <p>
-                I work with individuals dealing with anxiety, depression, and relational
-                struggles, and I also work with couples, offering premarital counseling as
-                well as marriage counseling for the many challenges and different stages of
-                marriage and family life. Whether you are feeling overwhelmed, stuck, or
-                unsure how to move forward, counseling can offer a steady place to slow
-                things down and gain more clarity.
-              </p>
-              <p>
-                I also work with women who are seeking hope and healing after an abortion,
-                often a deeply personal and quiet journey. I am passionate about providing
-                a safe, compassionate space where grief, shame, faith questions, and complex
-                emotions can be explored without judgment. Healing in this area can bring
-                profound restoration, freedom, and peace.
-              </p>
-              <p>
-                For those who wish, I am happy to incorporate Christian faith into the
-                counseling process. I am currently taking clients at our South location.
-              </p>
-            </div>
-            <div className="mt-10 bg-card rounded-2xl p-6 sm:p-8 max-w-2xl">
-              <div className="mb-4">
-                <h3 className="font-serif text-lg text-foreground mb-1">Education</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Master of Arts in Counseling, Dallas Theological Seminary<br />
-                  BS in Merchandising, Texas Tech University
-                </p>
-              </div>
-              <div>
-                <h3 className="font-serif text-lg text-foreground mb-1">Professional Memberships</h3>
-                <p className="text-sm sm:text-base text-muted-foreground">
-                  Christian Counselors of Texas
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── SECTION 3 — SERVICES ─── */}
-        <section className="py-24 sm:py-32">
-          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-12">
-              Services
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-              {[
-                {
-                  title: "Individual Counseling",
-                  desc: "Support for anxiety, depression, and relational struggles. A steady place to slow things down, gain clarity, and develop practical strategies for growth.",
-                },
-                {
-                  title: "Couples & Marriage",
-                  desc: "Premarital and marriage counseling for the many challenges and different stages of marriage and family life. Build stronger connections together.",
-                },
-                {
-                  title: "Post-Abortion Healing",
-                  desc: "A safe, compassionate space to explore grief, shame, faith questions, and complex emotions without judgment — finding restoration, freedom, and peace.",
-                },
-              ].map((s) => (
-                <div
-                  key={s.title}
-                  className="bg-card rounded-2xl p-7 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
-                >
-                  <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">{s.title}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed flex-1">
-                    {s.desc}
+                {/* Left — Identity + value prop + services */}
+                <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0 min-w-0">
+                  {/* Name block */}
+                  <div className="flex items-end gap-4 mb-1">
+                    <h1 className="font-serif text-4xl xl:text-5xl tracking-tight leading-[1.05] text-foreground">
+                      Michelle Traudt
+                    </h1>
+                    <img src={heartImage} alt="" className="w-5 h-5 opacity-50 mb-1" aria-hidden="true" />
+                  </div>
+                  <p className="text-sm text-muted-foreground/75 tracking-normal">
+                    Licensed Counselor & Speaker
                   </p>
-                  <a
-                    href="#contact"
-                    className="mt-5 text-sm text-primary hover:text-foreground transition-colors underline underline-offset-4"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* ─── SECTION 4 — WHAT YOU CAN EXPECT ─── */}
-        <section className="py-24 sm:py-32 bg-card/50">
-          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-12">
-              What You Can Expect
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
-              {[
-                {
-                  title: "Compassionate Listening",
-                  desc: "A genuinely attentive presence — no judgment, no rush. You'll feel heard from the very first conversation.",
-                },
-                {
-                  title: "Practical Tools",
-                  desc: "Evidence-based strategies you can apply in daily life — not just talk, but tangible steps forward.",
-                },
-                {
-                  title: "Faith-Integrated",
-                  desc: "For those who wish, Christian faith can be woven into the counseling process — meeting you where you are spiritually.",
-                },
-              ].map((item) => (
-                <div key={item.title}>
-                  <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">{item.title}</h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                    {item.desc}
+                  {/* Value statement */}
+                  <p className="mt-3 text-sm xl:text-base text-muted-foreground leading-relaxed max-w-xl" style={{ fontWeight: 450 }}>
+                    Therapy is a gift, a safe space as we navigate life's challenges. Healing takes time and patience, but the freedom, growth, and transformation that come from it can truly change your life.
                   </p>
+
+                  {/* CTA */}
+                  <div className="mt-4 flex items-center gap-4">
+                    <a
+                      href="mailto:michelletraudt@gmail.com"
+                      className="inline-block bg-primary/90 text-primary-foreground px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-primary transition-colors shadow-sm"
+                    >
+                      Schedule a Consultation
+                    </a>
+                    <a href="#about-mobile" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border">
+                      Learn More
+                    </a>
+                  </div>
+
+                  {/* Trust signals */}
+                  <p className="mt-2.5 text-[11px] text-muted-foreground/50 tracking-wide">
+                    Serving Dallas–Fort Worth · In-Person & Virtual Sessions · MA, Dallas Theological Seminary
+                  </p>
+
+                  {/* Services row */}
+                  <div className="mt-6 grid grid-cols-3 gap-3 xl:gap-4">
+                    {[
+                      { title: "Individual Counseling", desc: "Anxiety, depression, and relational struggles — a steady place to slow down and gain clarity." },
+                      { title: "Couples & Marriage", desc: "Premarital and marriage counseling for every stage of marriage and family life." },
+                      { title: "Post-Abortion Healing", desc: "A compassionate space to explore grief, faith questions, and complex emotions without judgment." },
+                    ].map((s) => (
+                      <div key={s.title} className="bg-card rounded-xl p-4 xl:p-5 shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="font-serif text-sm xl:text-base mb-1 text-foreground">{s.title}</h3>
+                        <p className="text-[11px] xl:text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* What to expect */}
+                  <div className="mt-5 grid grid-cols-3 gap-3 xl:gap-4">
+                    {[
+                      { title: "Compassionate Listening", desc: "No judgment, no rush — feel heard from the very first conversation." },
+                      { title: "Practical Tools", desc: "Evidence-based strategies you can apply in daily life." },
+                      { title: "Faith-Integrated", desc: "Christian faith woven in for those who wish — meeting you where you are." },
+                    ].map((item) => (
+                      <div key={item.title}>
+                        <h4 className="font-serif text-xs xl:text-sm text-foreground mb-0.5">{item.title}</h4>
+                        <p className="text-[11px] text-muted-foreground/70 leading-relaxed">{item.desc}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* ─── SECTION 5 — CTA BAND ─── */}
-        <section className="py-20 sm:py-24 bg-primary">
-          <div className="max-w-[700px] mx-auto px-6 sm:px-10 text-center">
-            <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary-foreground leading-snug tracking-tight">
-              Taking the first step can feel overwhelming.<br className="hidden sm:block" />
-              You don't have to do it alone.
-            </p>
-            <a
-              href="#contact"
-              className="mt-8 inline-block bg-primary-foreground text-foreground px-8 py-3.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
-            >
-              Book a Consultation
-            </a>
-          </div>
-        </section>
-
-        {/* ─── SECTION 6 — CONTACT ─── */}
-        <section id="contact" className="py-24 sm:py-32">
-          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-              {/* Left — Info */}
-              <div>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-8">
-                  Get in Touch
-                </h2>
-                <div className="space-y-5 text-base text-muted-foreground">
-                  <a
-                    href="mailto:michelletraudt@gmail.com"
-                    className="flex items-center gap-3 hover:text-foreground transition-colors"
-                  >
-                    <Mail className="w-5 h-5 shrink-0" />
-                    michelletraudt@gmail.com
-                  </a>
-                  <a
-                    href="tel:+1234567890"
-                    className="flex items-center gap-3 hover:text-foreground transition-colors"
-                  >
-                    <Phone className="w-5 h-5 shrink-0" />
-                    (123) 456-7890
-                  </a>
-                  <div className="flex items-center gap-3">
-                    <MapPin className="w-5 h-5 shrink-0" />
-                    Your City, State
+                {/* Right — Portrait */}
+                <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 shrink-0">
+                  <div className="w-[260px] xl:w-[300px] 2xl:w-[340px] aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
+                    <img
+                      src={michellePortrait}
+                      alt="Michelle Traudt, Licensed Counselor & Speaker"
+                      className="w-full h-full object-cover object-top"
+                    />
                   </div>
                 </div>
               </div>
 
-              {/* Right — Simple form */}
-              <form
-                className="space-y-5"
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  window.location.href = "mailto:michelletraudt@gmail.com";
-                }}
-              >
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1.5">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40"
-                    placeholder="Your name"
-                  />
+              {/* Bottom bar: CTA band + contact */}
+              <div className="mt-6 flex items-center gap-6 xl:gap-8 bg-primary/10 rounded-xl px-6 py-4 animate-[fade-in_1000ms_ease-out_forwards] opacity-0">
+                <p className="font-serif text-sm xl:text-base text-foreground/80 leading-snug shrink-0">
+                  Taking the first step can feel overwhelming.<br className="hidden xl:block" />
+                  <span className="text-foreground font-medium">You don't have to do it alone.</span>
+                </p>
+                <div className="h-8 w-px bg-border shrink-0" />
+                <div className="flex items-center gap-6 text-xs text-muted-foreground">
+                  <a href="mailto:michelletraudt@gmail.com" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
+                    <Mail className="w-3.5 h-3.5" /> michelletraudt@gmail.com
+                  </a>
+                  <a href="tel:+1234567890" className="flex items-center gap-1.5 hover:text-foreground transition-colors">
+                    <Phone className="w-3.5 h-3.5" /> (123) 456-7890
+                  </a>
+                  <span className="flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5" /> Dallas–Fort Worth, TX
+                  </span>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1.5">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40"
-                    placeholder="you@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1.5">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={4}
-                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40 resize-none"
-                    placeholder="How can I help?"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+                <a
+                  href="mailto:michelletraudt@gmail.com"
+                  className="ml-auto shrink-0 bg-primary text-primary-foreground px-5 py-2 rounded-lg text-xs font-semibold hover:bg-primary/80 transition-colors"
                 >
-                  Send Message
-                </button>
-              </form>
+                  Book Now
+                </a>
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* ─── FOOTER ─── */}
-        <footer className="py-8 px-6 sm:px-10 border-t border-border">
-          <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-muted-foreground">
+          {/* Footer */}
+          <footer className="px-10 xl:px-14 py-3 flex items-center justify-between max-w-[1280px] mx-auto w-full">
+            <p className="text-[10px] text-muted-foreground/40">
               © {new Date().getFullYear()} Michelle Traudt · All rights reserved
             </p>
-            <img src={heartImage} alt="" className="w-5 h-5 opacity-30" aria-hidden="true" />
-          </div>
-        </footer>
+            <p className="text-[10px] text-muted-foreground/40">
+              Christian Counselors of Texas
+            </p>
+          </footer>
+        </div>
+
+        {/* ===== MOBILE / TABLET — scrollable ===== */}
+        <div className="lg:hidden">
+          {/* Hero */}
+          <section className="min-h-screen flex items-center py-16 px-6 sm:px-10">
+            <div className="max-w-lg mx-auto w-full">
+              <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
+                <img src={heartImage} alt="Michelle Traudt Counseling" className="w-8 h-8 mb-4 opacity-70" />
+                <h1 className="font-serif text-4xl sm:text-5xl tracking-tight leading-[1.1] text-foreground">
+                  Michelle<br />Traudt
+                </h1>
+                <p className="text-sm text-muted-foreground/80 mt-2">Licensed Counselor & Speaker</p>
+                <p className="mt-4 text-base text-muted-foreground leading-relaxed" style={{ fontWeight: 450 }}>
+                  Therapy is a gift, a safe space as we navigate life's challenges. Healing takes time and patience, but the freedom, growth, and transformation that come from it can truly change your life.
+                </p>
+                <a
+                  href="mailto:michelletraudt@gmail.com"
+                  className="mt-6 inline-block bg-primary/90 text-primary-foreground px-7 py-3 rounded-lg text-sm font-semibold hover:bg-primary transition-colors shadow-sm"
+                >
+                  Schedule a Consultation
+                </a>
+                <p className="mt-3 text-[11px] text-muted-foreground/50 tracking-wide">
+                  Dallas–Fort Worth · In-Person & Virtual
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Portrait */}
+          <section className="px-6 sm:px-10 pb-16">
+            <div className="max-w-xs mx-auto aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
+              <img src={michellePortrait} alt="Michelle Traudt" className="w-full h-full object-cover object-top" />
+            </div>
+          </section>
+
+          {/* About */}
+          <section id="about-mobile" className="py-16 px-6 sm:px-10 bg-card/50">
+            <div className="max-w-lg mx-auto space-y-4 text-muted-foreground leading-relaxed text-sm">
+              <h2 className="font-serif text-2xl text-foreground mb-4">About Michelle</h2>
+              <p>I work with individuals dealing with anxiety, depression, and relational struggles, and I also work with couples, offering premarital counseling as well as marriage counseling for the many challenges and different stages of marriage and family life.</p>
+              <p>I also work with women who are seeking hope and healing after an abortion. I am passionate about providing a safe, compassionate space where grief, shame, faith questions, and complex emotions can be explored without judgment.</p>
+              <p>For those who wish, I am happy to incorporate Christian faith into the counseling process.</p>
+              <div className="pt-4 text-xs text-muted-foreground/60">
+                <p>MA in Counseling, Dallas Theological Seminary</p>
+                <p>Christian Counselors of Texas</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Services */}
+          <section className="py-16 px-6 sm:px-10">
+            <div className="max-w-lg mx-auto">
+              <h2 className="font-serif text-2xl text-foreground mb-6">Services</h2>
+              <div className="space-y-4">
+                {[
+                  { title: "Individual Counseling", desc: "Anxiety, depression, and relational struggles — a steady place to gain clarity." },
+                  { title: "Couples & Marriage", desc: "Premarital and marriage counseling for every stage of family life." },
+                  { title: "Post-Abortion Healing", desc: "A compassionate space for grief, faith questions, and complex emotions." },
+                ].map((s) => (
+                  <div key={s.title} className="bg-card rounded-xl p-5 shadow-sm">
+                    <h3 className="font-serif text-base mb-1">{s.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA */}
+          <section className="py-14 px-6 sm:px-10 bg-primary">
+            <div className="max-w-lg mx-auto text-center">
+              <p className="font-serif text-xl text-primary-foreground leading-snug">
+                Taking the first step can feel overwhelming. You don't have to do it alone.
+              </p>
+              <a href="mailto:michelletraudt@gmail.com" className="mt-5 inline-block bg-primary-foreground text-foreground px-7 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+                Book a Consultation
+              </a>
+            </div>
+          </section>
+
+          {/* Contact */}
+          <section className="py-14 px-6 sm:px-10">
+            <div className="max-w-lg mx-auto">
+              <h2 className="font-serif text-2xl text-foreground mb-5">Get in Touch</h2>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <a href="mailto:michelletraudt@gmail.com" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                  <Mail className="w-4 h-4" /> michelletraudt@gmail.com
+                </a>
+                <a href="tel:+1234567890" className="flex items-center gap-2 hover:text-foreground transition-colors">
+                  <Phone className="w-4 h-4" /> (123) 456-7890
+                </a>
+                <span className="flex items-center gap-2"><MapPin className="w-4 h-4" /> Dallas–Fort Worth, TX</span>
+              </div>
+            </div>
+          </section>
+
+          <footer className="py-6 px-6 border-t border-border text-center">
+            <p className="text-[10px] text-muted-foreground/40">© {new Date().getFullYear()} Michelle Traudt · All rights reserved</p>
+          </footer>
+        </div>
 
       </main>
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
     </>
   );
 };
