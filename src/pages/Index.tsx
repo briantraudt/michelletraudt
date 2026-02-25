@@ -38,8 +38,8 @@ const Index = () => {
                     Michelle Traudt
                   </h1>
                 </div>
-                <p className="text-xs md:text-sm text-muted-foreground/70 mt-1.5">
-                  Licensed Counselor & Speaker
+                <p className="text-xs md:text-sm text-muted-foreground/70 mt-1.5 text-center w-fit">
+                  Licensed Professional Counselor
                 </p>
 
                 <p className="mt-3 md:mt-4 lg:mt-5 text-sm md:text-base xl:text-lg text-muted-foreground leading-relaxed max-w-lg">
@@ -119,7 +119,7 @@ const Index = () => {
             <h1 className="font-serif text-3xl tracking-tight leading-[1.1] text-foreground">
               Michelle Traudt
             </h1>
-            <p className="text-xs text-muted-foreground/70 mt-1">Licensed Counselor & Speaker</p>
+            <p className="text-xs text-muted-foreground/70 mt-1">Licensed Professional Counselor</p>
 
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
               You don't have to carry it alone. Counseling offers a steady, compassionate
