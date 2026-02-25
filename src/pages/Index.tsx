@@ -17,44 +17,54 @@ const Index = () => {
       <main role="main" className="overflow-x-hidden">
 
         {/* ─── SECTION 1 — HERO ─── */}
-        <section className="min-h-screen flex items-center">
-          <div className="w-full max-w-[1100px] mx-auto px-6 sm:px-10 py-16 lg:py-0">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <section className="min-h-screen lg:min-h-0 lg:h-screen lg:max-h-[85vh] flex items-center py-16 lg:py-0">
+          <div className="w-full max-w-[1180px] mx-auto px-6 sm:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
               {/* Left — Copy */}
               <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
                 <img
                   src={heartImage}
                   alt="Michelle Traudt Counseling"
-                  className="w-10 h-10 mb-6 opacity-80"
+                  className="w-6 h-6 mb-4 opacity-60"
                 />
-                <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground">
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-[3.5rem] xl:text-6xl tracking-tight leading-[1.1] text-foreground">
                   Michelle<br />Traudt
                 </h1>
-                <p className="font-sans text-base sm:text-lg text-muted-foreground mt-3 tracking-wide">
+                <p className="font-sans text-sm sm:text-base text-muted-foreground/80 mt-2 tracking-normal">
                   Licensed Counselor & Speaker
                 </p>
-                <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
+                <p className="mt-4 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg font-normal" style={{ fontWeight: 450 }}>
                   Therapy is a gift, a safe space as we navigate life's challenges. Healing takes time and patience, but the freedom, growth, and transformation that come from it can truly change your life.
                 </p>
-                <div className="mt-8 flex flex-wrap items-center gap-4">
+                <div className="mt-5 flex flex-wrap items-center gap-4">
                   <a
                     href="#contact"
-                    className="inline-block bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+                    className="inline-block bg-primary/90 text-primary-foreground px-8 py-3.5 rounded-lg text-sm font-semibold hover:bg-primary transition-colors shadow-sm"
                   >
                     Schedule a Consultation
                   </a>
                   <a
                     href="#about"
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
+                    className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
                   >
                     Learn More
                   </a>
                 </div>
+                <p className="mt-4 text-xs text-muted-foreground/60 tracking-wide">
+                  Serving Dallas–Fort Worth · In-Person & Virtual Sessions Available
+                </p>
+                <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-muted-foreground/50 tracking-wide">
+                  <span>Licensed Professional Counselor</span>
+                  <span className="hidden sm:inline">·</span>
+                  <span>MA in Counseling</span>
+                  <span className="hidden sm:inline">·</span>
+                  <span>Confidential & Client-Centered</span>
+                </div>
               </div>
 
-              {/* Right — Portrait placeholder */}
+              {/* Right — Portrait */}
               <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 flex justify-center lg:justify-end">
-                <div className="w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-2xl overflow-hidden shadow-sm">
+                <div className="w-full max-w-xs sm:max-w-sm lg:max-w-[340px] xl:max-w-[380px] aspect-[3/4] rounded-2xl overflow-hidden shadow-md">
                   <img
                     src={michellePortrait}
                     alt="Michelle Traudt, Licensed Counselor & Speaker"
