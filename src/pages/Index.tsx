@@ -34,7 +34,7 @@ const Index = () => {
                   Licensed Counselor & Speaker
                 </p>
                 <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
-                  Helping individuals and families navigate life's challenges with clarity, compassion, and strength.
+                  Therapy is a gift, a safe space as we navigate life's challenges. Healing takes time and patience, but the freedom, growth, and transformation that come from it can truly change your life.
                 </p>
                 <div className="mt-8 flex flex-wrap items-center gap-4">
                   <a
@@ -74,20 +74,39 @@ const Index = () => {
             </h2>
             <div className="max-w-2xl space-y-5 text-muted-foreground leading-[1.75] text-base sm:text-lg">
               <p>
-                Michelle is a dedicated counselor and speaker committed to helping individuals
-                and families work through life's transitions with grace and resilience. She
-                creates a safe, judgment-free environment where clients feel seen, heard, and
-                supported as they pursue meaningful change.
+                I work with individuals dealing with anxiety, depression, and relational
+                struggles, and I also work with couples, offering premarital counseling as
+                well as marriage counseling for the many challenges and different stages of
+                marriage and family life. Whether you are feeling overwhelmed, stuck, or
+                unsure how to move forward, counseling can offer a steady place to slow
+                things down and gain more clarity.
               </p>
               <p>
-                With over 10 years of clinical experience, Michelle brings warmth, empathy, and
-                evidence-based practices to every session. Her approach is rooted in the belief
-                that everyone deserves to be met where they are.
+                I also work with women who are seeking hope and healing after an abortion,
+                often a deeply personal and quiet journey. I am passionate about providing
+                a safe, compassionate space where grief, shame, faith questions, and complex
+                emotions can be explored without judgment. Healing in this area can bring
+                profound restoration, freedom, and peace.
+              </p>
+              <p>
+                For those who wish, I am happy to incorporate Christian faith into the
+                counseling process. I am currently taking clients at our South location.
               </p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
-              <span>LPC · Licensed Professional Counselor</span>
-              <span>10+ Years Experience</span>
+            <div className="mt-10 bg-card rounded-2xl p-6 sm:p-8 max-w-2xl">
+              <div className="mb-4">
+                <h3 className="font-serif text-lg text-foreground mb-1">Education</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Master of Arts in Counseling, Dallas Theological Seminary<br />
+                  BS in Merchandising, Texas Tech University
+                </p>
+              </div>
+              <div>
+                <h3 className="font-serif text-lg text-foreground mb-1">Professional Memberships</h3>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                  Christian Counselors of Texas
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -102,15 +121,15 @@ const Index = () => {
               {[
                 {
                   title: "Individual Counseling",
-                  desc: "A safe, supportive space to explore your thoughts, emotions, and goals at your own pace. Together we'll develop practical strategies for lasting growth.",
+                  desc: "Support for anxiety, depression, and relational struggles. A steady place to slow things down, gain clarity, and develop practical strategies for growth.",
                 },
                 {
-                  title: "Speaking & Workshops",
-                  desc: "Engaging, thoughtful presentations for organizations, faith communities, and professional groups on topics of resilience, mental health, and well-being.",
+                  title: "Couples & Marriage",
+                  desc: "Premarital and marriage counseling for the many challenges and different stages of marriage and family life. Build stronger connections together.",
                 },
                 {
-                  title: "Group Sessions",
-                  desc: "Connect with others navigating similar experiences in a guided, confidential group setting. Shared stories lead to shared healing.",
+                  title: "Post-Abortion Healing",
+                  desc: "A safe, compassionate space to explore grief, shame, faith questions, and complex emotions without judgment — finding restoration, freedom, and peace.",
                 },
               ].map((s) => (
                 <div
@@ -150,8 +169,8 @@ const Index = () => {
                   desc: "Evidence-based strategies you can apply in daily life — not just talk, but tangible steps forward.",
                 },
                 {
-                  title: "Holistic Approach",
-                  desc: "Addressing mind, body, and spirit to support complete well-being — because healing isn't one-dimensional.",
+                  title: "Faith-Integrated",
+                  desc: "For those who wish, Christian faith can be woven into the counseling process — meeting you where you are spiritually.",
                 },
               ].map((item) => (
                 <div key={item.title}>
