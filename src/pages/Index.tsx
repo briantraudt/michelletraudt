@@ -8,200 +8,275 @@ const Index = () => {
     "@type": "Person",
     name: "Michelle Traudt",
     url: "https://michelletraudt.com",
-    jobTitle: "Counselor & Speaker",
+    jobTitle: "Licensed Counselor & Speaker",
   };
-
-  const services = [
-    { title: "Individual Counseling", desc: "A safe space to explore your thoughts and goals at your own pace." },
-    { title: "Speaking & Workshops", desc: "Engaging talks for organizations, churches, and community groups." },
-    { title: "Group Sessions", desc: "Connect with others in a guided group setting for shared growth." },
-  ];
 
   return (
     <>
-      <main role="main">
-        {/* ===== DESKTOP: single viewport, no scroll ===== */}
-        <div className="hidden lg:grid h-screen w-screen overflow-hidden grid-cols-[1fr_1.8fr] grid-rows-[1fr_auto]">
-          {/* Left column – identity & photo */}
-          <div className="row-span-2 flex flex-col items-center justify-center bg-muted/20 border-r border-border relative overflow-hidden">
-            {/* Subtle decorative hearts */}
-            <img src={heartImage} alt="" className="absolute top-8 left-8 w-6 h-6 opacity-[0.06] -rotate-12" aria-hidden="true" />
-            <img src={heartImage} alt="" className="absolute bottom-12 right-10 w-8 h-8 opacity-[0.06] rotate-12" aria-hidden="true" />
-            <img src={heartImage} alt="" className="absolute top-1/4 right-6 w-5 h-5 opacity-[0.04] rotate-6" aria-hidden="true" />
+      <main role="main" className="overflow-x-hidden">
 
-            <div className="flex flex-col items-center px-10">
-              <img src={heartImage} alt="Heart" className="w-14 h-14 mb-5 animate-[fade-in-up_600ms_ease-out_forwards] opacity-0" />
-              <h1 className="font-serif text-4xl xl:text-5xl 2xl:text-6xl tracking-tight text-center animate-[fade-in-up_700ms_ease-out_forwards] opacity-0 leading-tight">
-                Michelle<br />Traudt
-              </h1>
-              <span className="text-base xl:text-lg 2xl:text-xl text-muted-foreground mt-2 font-serif animate-[fade-in-up_750ms_ease-out_forwards] opacity-0">
-                Counselor & Speaker
-              </span>
-              <div className="accent-bar mt-5 animate-[fade-in-up_800ms_ease-out_forwards] opacity-0" />
+        {/* ─── SECTION 1 — HERO ─── */}
+        <section className="min-h-screen flex items-center">
+          <div className="w-full max-w-[1100px] mx-auto px-6 sm:px-10 py-16 lg:py-0">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left — Copy */}
+              <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
+                <img
+                  src={heartImage}
+                  alt="Michelle Traudt Counseling"
+                  className="w-10 h-10 mb-6 opacity-80"
+                />
+                <h1 className="font-serif text-5xl sm:text-6xl lg:text-7xl tracking-tight leading-[1.1] text-foreground">
+                  Michelle<br />Traudt
+                </h1>
+                <p className="font-sans text-base sm:text-lg text-muted-foreground mt-3 tracking-wide">
+                  Licensed Counselor & Speaker
+                </p>
+                <p className="mt-6 text-base sm:text-lg text-muted-foreground leading-relaxed max-w-lg">
+                  Helping individuals and families navigate life's challenges with clarity, compassion, and strength.
+                </p>
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  <a
+                    href="#contact"
+                    className="inline-block bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+                  >
+                    Schedule a Consultation
+                  </a>
+                  <a
+                    href="#about"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors underline underline-offset-4 decoration-border"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              </div>
 
-              {/* Photo placeholder */}
-              <div className="mt-8 w-44 xl:w-52 2xl:w-60 aspect-[3/4] rounded-2xl bg-background border border-border shadow-sm flex items-center justify-center animate-[fade-in-up_850ms_ease-out_forwards] opacity-0">
-                <div className="text-center p-4">
-                  <img src={heartImage} alt="" className="w-7 h-7 mx-auto mb-2 opacity-20" aria-hidden="true" />
-                  <span className="text-[11px] text-muted-foreground uppercase tracking-widest">Photo</span>
+              {/* Right — Portrait placeholder */}
+              <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 flex justify-center lg:justify-end">
+                <div className="w-full max-w-sm lg:max-w-md aspect-[3/4] rounded-2xl bg-card flex items-center justify-center shadow-sm">
+                  <span className="text-sm text-muted-foreground tracking-widest uppercase">
+                    Portrait
+                  </span>
                 </div>
               </div>
             </div>
           </div>
+        </section>
 
-          {/* Right area – content */}
-          <div className="flex flex-col justify-center px-12 xl:px-16 2xl:px-20 py-10 gap-10 xl:gap-12">
-            {/* About */}
-            <div className="animate-[fade-in-up_800ms_ease-out_forwards] opacity-0">
-              <div className="flex items-center gap-2.5 mb-3">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-40" aria-hidden="true" />
-                <h2 className="font-serif text-2xl xl:text-3xl tracking-tight">About</h2>
-              </div>
-              <p className="text-sm xl:text-base text-muted-foreground leading-relaxed max-w-2xl">
-                Michelle is a dedicated counselor and speaker helping individuals and families navigate
-                life's challenges with grace and resilience. She creates a warm, judgment-free space
-                where clients feel seen, heard, and empowered to make meaningful changes in their lives.
+        {/* ─── SECTION 2 — ABOUT ─── */}
+        <section id="about" className="py-24 sm:py-32 bg-card/50">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-8">
+              About Michelle
+            </h2>
+            <div className="max-w-2xl space-y-5 text-muted-foreground leading-[1.75] text-base sm:text-lg">
+              <p>
+                Michelle is a dedicated counselor and speaker committed to helping individuals
+                and families work through life's transitions with grace and resilience. She
+                creates a safe, judgment-free environment where clients feel seen, heard, and
+                supported as they pursue meaningful change.
+              </p>
+              <p>
+                With over 10 years of clinical experience, Michelle brings warmth, empathy, and
+                evidence-based practices to every session. Her approach is rooted in the belief
+                that everyone deserves to be met where they are.
               </p>
             </div>
-
-            {/* Services */}
-            <div className="animate-[fade-in-up_900ms_ease-out_forwards] opacity-0">
-              <div className="flex items-center gap-2.5 mb-4">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-40" aria-hidden="true" />
-                <h2 className="font-serif text-2xl xl:text-3xl tracking-tight">What I Offer</h2>
-              </div>
-              <div className="grid grid-cols-3 gap-4 xl:gap-5">
-                {services.map((s) => (
-                  <div
-                    key={s.title}
-                    className="group p-5 xl:p-6 rounded-2xl border border-border bg-muted/20 hover:bg-background hover:shadow-md hover:border-border/80 transition-all duration-300"
-                  >
-                    <img src={heartImage} alt="" className="w-5 h-5 mb-3 opacity-15 group-hover:opacity-30 transition-opacity" aria-hidden="true" />
-                    <h3 className="font-serif text-sm xl:text-base mb-1.5">{s.title}</h3>
-                    <p className="text-xs xl:text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact */}
-            <div className="animate-[fade-in-up_1000ms_ease-out_forwards] opacity-0">
-              <div className="flex items-center gap-2.5 mb-4">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-40" aria-hidden="true" />
-                <h2 className="font-serif text-2xl xl:text-3xl tracking-tight">Get in Touch</h2>
-              </div>
-              <div className="flex flex-wrap gap-8 text-sm text-muted-foreground">
-                <a href="mailto:michelletraudt@gmail.com" className="flex items-center gap-2.5 hover:text-foreground transition-colors group">
-                  <div className="w-8 h-8 rounded-full bg-muted/60 flex items-center justify-center group-hover:bg-muted transition-colors">
-                    <Mail className="w-3.5 h-3.5" />
-                  </div>
-                  michelletraudt@gmail.com
-                </a>
-                <a href="tel:+1234567890" className="flex items-center gap-2.5 hover:text-foreground transition-colors group">
-                  <div className="w-8 h-8 rounded-full bg-muted/60 flex items-center justify-center group-hover:bg-muted transition-colors">
-                    <Phone className="w-3.5 h-3.5" />
-                  </div>
-                  (123) 456-7890
-                </a>
-                <span className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-full bg-muted/60 flex items-center justify-center">
-                    <MapPin className="w-3.5 h-3.5" />
-                  </div>
-                  Your City, State
-                </span>
-              </div>
+            <div className="mt-8 flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted-foreground">
+              <span>LPC · Licensed Professional Counselor</span>
+              <span>10+ Years Experience</span>
             </div>
           </div>
+        </section>
 
-          {/* Footer pinned to bottom-right */}
-          <div className="px-12 xl:px-16 2xl:px-20 pb-5 flex items-end">
-            <p className="text-[11px] text-muted-foreground/40">
+        {/* ─── SECTION 3 — SERVICES ─── */}
+        <section className="py-24 sm:py-32">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-12">
+              Services
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {[
+                {
+                  title: "Individual Counseling",
+                  desc: "A safe, supportive space to explore your thoughts, emotions, and goals at your own pace. Together we'll develop practical strategies for lasting growth.",
+                },
+                {
+                  title: "Speaking & Workshops",
+                  desc: "Engaging, thoughtful presentations for organizations, faith communities, and professional groups on topics of resilience, mental health, and well-being.",
+                },
+                {
+                  title: "Group Sessions",
+                  desc: "Connect with others navigating similar experiences in a guided, confidential group setting. Shared stories lead to shared healing.",
+                },
+              ].map((s) => (
+                <div
+                  key={s.title}
+                  className="bg-card rounded-2xl p-7 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
+                >
+                  <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">{s.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed flex-1">
+                    {s.desc}
+                  </p>
+                  <a
+                    href="#contact"
+                    className="mt-5 text-sm text-primary hover:text-foreground transition-colors underline underline-offset-4"
+                  >
+                    Learn More
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── SECTION 4 — WHAT YOU CAN EXPECT ─── */}
+        <section className="py-24 sm:py-32 bg-card/50">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-12">
+              What You Can Expect
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
+              {[
+                {
+                  title: "Compassionate Listening",
+                  desc: "A genuinely attentive presence — no judgment, no rush. You'll feel heard from the very first conversation.",
+                },
+                {
+                  title: "Practical Tools",
+                  desc: "Evidence-based strategies you can apply in daily life — not just talk, but tangible steps forward.",
+                },
+                {
+                  title: "Holistic Approach",
+                  desc: "Addressing mind, body, and spirit to support complete well-being — because healing isn't one-dimensional.",
+                },
+              ].map((item) => (
+                <div key={item.title}>
+                  <h3 className="font-serif text-xl sm:text-2xl mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── SECTION 5 — CTA BAND ─── */}
+        <section className="py-20 sm:py-24 bg-primary">
+          <div className="max-w-[700px] mx-auto px-6 sm:px-10 text-center">
+            <p className="font-serif text-2xl sm:text-3xl lg:text-4xl text-primary-foreground leading-snug tracking-tight">
+              Taking the first step can feel overwhelming.<br className="hidden sm:block" />
+              You don't have to do it alone.
+            </p>
+            <a
+              href="#contact"
+              className="mt-8 inline-block bg-primary-foreground text-foreground px-8 py-3.5 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              Book a Consultation
+            </a>
+          </div>
+        </section>
+
+        {/* ─── SECTION 6 — CONTACT ─── */}
+        <section id="contact" className="py-24 sm:py-32">
+          <div className="max-w-[1100px] mx-auto px-6 sm:px-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+              {/* Left — Info */}
+              <div>
+                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-8">
+                  Get in Touch
+                </h2>
+                <div className="space-y-5 text-base text-muted-foreground">
+                  <a
+                    href="mailto:michelletraudt@gmail.com"
+                    className="flex items-center gap-3 hover:text-foreground transition-colors"
+                  >
+                    <Mail className="w-5 h-5 shrink-0" />
+                    michelletraudt@gmail.com
+                  </a>
+                  <a
+                    href="tel:+1234567890"
+                    className="flex items-center gap-3 hover:text-foreground transition-colors"
+                  >
+                    <Phone className="w-5 h-5 shrink-0" />
+                    (123) 456-7890
+                  </a>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-5 h-5 shrink-0" />
+                    Your City, State
+                  </div>
+                </div>
+              </div>
+
+              {/* Right — Simple form */}
+              <form
+                className="space-y-5"
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  window.location.href = "mailto:michelletraudt@gmail.com";
+                }}
+              >
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium mb-1.5">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium mb-1.5">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40"
+                    placeholder="you@email.com"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium mb-1.5">
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    rows={4}
+                    className="w-full rounded-lg border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:ring-2 focus:ring-ring/40 resize-none"
+                    placeholder="How can I help?"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="bg-primary text-primary-foreground px-7 py-3 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── FOOTER ─── */}
+        <footer className="py-8 px-6 sm:px-10 border-t border-border">
+          <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Michelle Traudt · All rights reserved
             </p>
+            <img src={heartImage} alt="" className="w-5 h-5 opacity-30" aria-hidden="true" />
           </div>
-        </div>
+        </footer>
 
-        {/* ===== MOBILE / TABLET: scrollable sections ===== */}
-        <div className="lg:hidden">
-          {/* Hero */}
-          <section className="min-h-screen flex items-center justify-center px-6">
-            <div className="text-center max-w-md mx-auto">
-              <img src={heartImage} alt="Heart" className="w-16 h-16 mx-auto mb-6 animate-[fade-in-up_600ms_ease-out_forwards] opacity-0" />
-              <h1 className="font-serif tracking-tight text-4xl sm:text-5xl animate-[fade-in-up_700ms_ease-out_forwards] opacity-0">
-                <span className="block">Michelle Traudt</span>
-                <span className="block text-xl sm:text-2xl text-muted-foreground mt-2">Counselor & Speaker</span>
-              </h1>
-              <div className="mx-auto mt-6 accent-bar animate-[fade-in-up_800ms_ease-out_forwards] opacity-0" />
-              <p className="mt-8 text-base text-muted-foreground animate-[fade-in-up_900ms_ease-out_forwards] opacity-0 leading-relaxed">
-                Helping you find clarity, confidence, and connection — one conversation at a time.
-              </p>
-            </div>
-          </section>
-
-          {/* About + Photo */}
-          <section className="py-16 px-6">
-            <div className="max-w-md mx-auto">
-              <div className="aspect-[3/4] max-w-[240px] mx-auto rounded-2xl bg-muted/60 border border-border flex items-center justify-center mb-8">
-                <div className="text-center p-6">
-                  <img src={heartImage} alt="" className="w-8 h-8 mx-auto mb-3 opacity-25" aria-hidden="true" />
-                  <span className="text-xs text-muted-foreground uppercase tracking-wider">Photo Coming Soon</span>
-                </div>
-              </div>
-              <div className="flex items-center gap-2 mb-4">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-35" aria-hidden="true" />
-                <h2 className="font-serif text-2xl tracking-tight">About</h2>
-              </div>
-              <div className="space-y-3 text-muted-foreground leading-relaxed text-sm">
-                <p>Michelle is a dedicated counselor and speaker helping individuals and families navigate life's challenges with grace and resilience.</p>
-                <p>She creates a warm, judgment-free space where clients feel seen, heard, and empowered to make meaningful changes.</p>
-              </div>
-            </div>
-          </section>
-
-          {/* Services */}
-          <section className="py-16 px-6 bg-muted/30">
-            <div className="max-w-md mx-auto">
-              <div className="flex items-center gap-2 mb-6">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-35" aria-hidden="true" />
-                <h2 className="font-serif text-2xl tracking-tight">What I Offer</h2>
-              </div>
-              <div className="space-y-4">
-                {services.map((s) => (
-                  <div key={s.title} className="p-5 rounded-xl border border-border bg-background">
-                    <h3 className="font-serif text-base mb-1">{s.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-
-          {/* Contact */}
-          <section className="py-16 px-6">
-            <div className="max-w-md mx-auto text-center">
-              <div className="flex items-center justify-center gap-2 mb-6">
-                <img src={heartImage} alt="" className="w-5 h-5 opacity-35" aria-hidden="true" />
-                <h2 className="font-serif text-2xl tracking-tight">Get in Touch</h2>
-              </div>
-              <div className="space-y-4">
-                <a href="mailto:michelletraudt@gmail.com" className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-                  <Mail className="w-4 h-4" /> michelletraudt@gmail.com
-                </a>
-                <a href="tel:+1234567890" className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
-                  <Phone className="w-4 h-4" /> (123) 456-7890
-                </a>
-                <span className="flex items-center justify-center gap-2 text-muted-foreground">
-                  <MapPin className="w-4 h-4" /> Your City, State
-                </span>
-              </div>
-              <div className="mt-8 accent-bar mx-auto" />
-              <p className="text-[10px] text-muted-foreground/50 mt-6">© {new Date().getFullYear()} Michelle Traudt</p>
-            </div>
-          </section>
-        </div>
       </main>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
     </>
   );
 };
