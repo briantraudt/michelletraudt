@@ -1,4 +1,5 @@
 import React from "react";
+import heartImage from "@/assets/heart.png";
 import michellePortrait from "@/assets/michelle-portrait.jpg";
 import { Mail, Phone, MapPin } from "lucide-react";
 
@@ -22,12 +23,14 @@ const Index = () => {
       <main role="main" className="overflow-x-hidden">
 
         {/* ===== DESKTOP + TABLET — single viewport ===== */}
-        <div className="hidden md:flex h-screen w-screen overflow-hidden items-center">
+        <div className="hidden md:flex h-screen w-screen overflow-hidden flex-col">
+          <div className="flex-1 flex items-center">
           <div className="w-full max-w-[1200px] mx-auto px-6 md:px-8 lg:px-10 xl:px-14">
             <div className="grid grid-cols-[1fr_auto] gap-6 md:gap-8 lg:gap-12 xl:gap-16 items-center">
 
               {/* Left — Text stack */}
               <div className="animate-[fade-in-up_700ms_ease-out_forwards] opacity-0 min-w-0">
+                <img src={heartImage} alt="" className="w-8 h-8 mb-3 opacity-80" aria-hidden="true" />
                 <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-[1.05] text-foreground">
                   Michelle Traudt
                 </h1>
@@ -64,9 +67,6 @@ const Index = () => {
                     </div>
                   ))}
                 </div>
-                <p className="mt-2 md:mt-3 text-[10px] md:text-[11px] xl:text-xs text-muted-foreground tracking-wide">
-                  New Life Counseling Center · Southwest Location · 3355 Bee Caves Road, #101 · Austin, Texas 78746
-                </p>
               </div>
 
               {/* Right — Portrait */}
@@ -88,6 +88,11 @@ const Index = () => {
               </div>
             </div>
           </div>
+          </div>
+          {/* Address pinned to bottom */}
+          <p className="text-center text-[10px] md:text-[11px] xl:text-xs text-muted-foreground tracking-wide pb-4">
+            New Life Counseling Center · Southwest Location · 3355 Bee Caves Road, #101 · Austin, Texas 78746
+          </p>
         </div>
 
         {/* ===== MOBILE only ===== */}
