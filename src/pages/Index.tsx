@@ -4,12 +4,64 @@ import michellePortrait from "@/assets/michelle-portrait.jpg";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Index = () => {
-  const jsonLd = {
+  const jsonLdPerson = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Michelle Traudt",
     url: "https://michelletraudt.com",
-    jobTitle: "Licensed Counselor & Speaker",
+    jobTitle: "Licensed Professional Counselor",
+    description: "Christian counselor in Austin, Texas specializing in individual counseling, couples & marriage counseling, and post-abortion healing.",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3355 Bee Caves Road, #101",
+      addressLocality: "Austin",
+      addressRegion: "TX",
+      postalCode: "78746",
+      addressCountry: "US",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "New Life Counseling Center",
+      url: "https://www.newlifecounselingcenter.com/",
+    },
+    sameAs: ["https://michelletraudt.com"],
+  };
+
+  const jsonLdService = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Michelle Traudt — Christian Counseling in Austin, TX",
+    url: "https://michelletraudt.com",
+    description: "Faith-based Christian counseling in Austin, Texas. Licensed Professional Counselor offering individual therapy, couples & marriage counseling, and post-abortion healing.",
+    provider: {
+      "@type": "Person",
+      name: "Michelle Traudt",
+    },
+    areaServed: {
+      "@type": "City",
+      name: "Austin",
+      containedInPlace: {
+        "@type": "State",
+        name: "Texas",
+      },
+    },
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "3355 Bee Caves Road, #101",
+      addressLocality: "Austin",
+      addressRegion: "TX",
+      postalCode: "78746",
+      addressCountry: "US",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Counseling Services",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Individual Counseling", description: "Anxiety, depression, and relational struggles" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Couples & Marriage Counseling", description: "Premarital and marriage counseling" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Post-Abortion Healing", description: "Restoration, freedom, and peace" } },
+      ],
+    },
   };
 
   const services = [
