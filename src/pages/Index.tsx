@@ -1,69 +1,8 @@
 import React from "react";
 import heartImage from "@/assets/heart.png";
 import michellePortrait from "@/assets/michelle-portrait.jpg";
-import { Mail, Phone, MapPin } from "lucide-react";
 
 const Index = () => {
-  const jsonLdPerson = {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Michelle Traudt",
-    url: "https://michelletraudt.com",
-    jobTitle: "Licensed Professional Counselor",
-    description: "Christian counselor in Austin, Texas specializing in individual counseling, couples & marriage counseling, and post-abortion healing.",
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "3355 Bee Caves Road, #101",
-      addressLocality: "Austin",
-      addressRegion: "TX",
-      postalCode: "78746",
-      addressCountry: "US",
-    },
-    worksFor: {
-      "@type": "Organization",
-      name: "New Life Counseling Center",
-      url: "https://www.newlifecounselingcenter.com/",
-    },
-    sameAs: ["https://michelletraudt.com"],
-  };
-
-  const jsonLdService = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Michelle Traudt — Christian Counseling in Austin, TX",
-    url: "https://michelletraudt.com",
-    description: "Faith-based Christian counseling in Austin, Texas. Licensed Professional Counselor offering individual therapy, couples & marriage counseling, and post-abortion healing.",
-    provider: {
-      "@type": "Person",
-      name: "Michelle Traudt",
-    },
-    areaServed: {
-      "@type": "City",
-      name: "Austin",
-      containedInPlace: {
-        "@type": "State",
-        name: "Texas",
-      },
-    },
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: "3355 Bee Caves Road, #101",
-      addressLocality: "Austin",
-      addressRegion: "TX",
-      postalCode: "78746",
-      addressCountry: "US",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Counseling Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Individual Counseling", description: "Anxiety, depression, and relational struggles" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Couples & Marriage Counseling", description: "Premarital and marriage counseling" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Post-Abortion Healing", description: "Restoration, freedom, and peace" } },
-      ],
-    },
-  };
-
   const services = [
     { title: "Individual Counseling", desc: "Anxiety, depression, and relational struggles" },
     { title: "Couples & Marriage", desc: "Premarital and marriage counseling" },
@@ -90,7 +29,7 @@ const Index = () => {
                     Michelle Traudt
                   </h1>
                   <p className="text-xs md:text-sm text-muted-foreground/70 mt-1.5 text-center">
-                    Licensed Professional Counselor
+                    Licensed Professional Counselor Associate
                   </p>
                 </div>
 
@@ -148,6 +87,8 @@ const Index = () => {
                   <p className="font-semibold text-foreground/70 mb-0.5">Education</p>
                   <p>MA in Counseling, Dallas Theological Seminary</p>
                   <p>BS in Merchandising, Texas Tech University</p>
+                  <p className="font-semibold text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Supervision</p>
+                  <p>Supervised by Deana Reed, LPC-S #68220</p>
                   <p className="font-semibold text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Professional Memberships</p>
                   <p>Christian Counselors of Texas</p>
                 </div>
@@ -171,7 +112,8 @@ const Index = () => {
             <h1 className="font-serif text-3xl tracking-tight leading-[1.1] text-foreground">
               Michelle Traudt
             </h1>
-            <p className="text-xs text-muted-foreground/70 mt-1">Licensed Professional Counselor</p>
+            <p className="text-xs text-muted-foreground/70 mt-1">Licensed Professional Counselor Associate</p>
+            <p className="text-[10px] text-muted-foreground/60 mt-0.5">Supervised by Deana Reed, LPC-S #68220</p>
 
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
               You don't have to carry it alone. Counseling offers a steady, compassionate
@@ -205,8 +147,6 @@ const Index = () => {
         </div>
 
       </main>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdService) }} />
     </>
   );
 };
