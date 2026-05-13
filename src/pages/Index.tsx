@@ -87,8 +87,6 @@ const Index = () => {
                   <p className="font-semibold text-foreground/70 mb-0.5">Education</p>
                   <p>MA in Counseling, Dallas Theological Seminary</p>
                   <p>BS in Merchandising, Texas Tech University</p>
-                  <p className="font-semibold text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Supervision</p>
-                  <p>Supervised by Deana Reed, LPC-S #68220</p>
                   <p className="font-semibold text-foreground/70 mt-2 md:mt-2.5 mb-0.5">Professional Memberships</p>
                   <p>Christian Counselors of Texas</p>
                 </div>
@@ -113,7 +111,6 @@ const Index = () => {
               Michelle Traudt
             </h1>
             <p className="text-xs text-muted-foreground/70 mt-1">Licensed Professional Counselor Associate</p>
-            <p className="text-[10px] text-muted-foreground/60 mt-0.5">Supervised by Deana Reed, LPC-S #68220</p>
 
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed max-w-xs">
               You don't have to carry it alone. Counseling offers a steady, compassionate
